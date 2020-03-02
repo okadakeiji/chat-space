@@ -1,0 +1,21 @@
+.side-bar
+  .user-name
+    .top-box
+      .top-box__name
+        side
+      .top-box__icon
+        = link_to "#", class: "top-box__icon--btn" do
+          <i class="far fa-edit"></i>
+        = link_to "#", class: "top-box__icon--btn" do
+          <i class="fas fa-cog"></i>
+  .side-groups
+    =link_to "#", class: "side-groups__list" do
+      %p.side-groups__list--name
+        techchamp
+      %p.side-groups__list--message
+        まだメッセージがありません
+    =link_to "#", class: "side-groups__list" do
+      %p.side-groups__list--name
+        techchamp
+      %p.side-groups__list--message
+        まだメッセージがありません
