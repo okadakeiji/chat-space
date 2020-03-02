@@ -1,0 +1,35 @@
+.main-chat
+  .group-edit
+    .current
+      .current--group
+        test
+      %ul.current__member-list
+        Member：
+        %li.current__member-list--first
+          chat
+      = link_to "#", class: "group-edit--btn" do
+        Edit
+  .messages
+    .message
+      .message__upper-info
+        %p.message__upper-info__talker
+          space
+        %p.message__upper-info__date
+          2020/02/29(Sat)
+      .message__text
+        expert
+      .message__upper-info
+        %p.message__upper-info__talker
+          space
+        %p.message__upper-info__date
+          2020/02/29(Sat)
+      .message__text
+        expert
+  .form
+    %form.form__massage
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
+        %label{class: "input-box__image"}
+          = icon('fas', 'image')
+          %input{type: "file", class: "input-box__image__file"}
+      %input{type: "submit", class: "submit-btn"}
