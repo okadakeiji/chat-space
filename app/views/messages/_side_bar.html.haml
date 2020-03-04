@@ -3,20 +3,16 @@
     .top-box
       = current_user.name
       .top-box__name
-        side
       .top-box__icon
-        = link_to "#", class: "top-box__icon--btn" do
+        = link_to new_group_path, class: "top-box__icon--btn" do
           <i class="far fa-edit"></i>
-        = link_to edit_user_path(current_user), class: "top-box__icon--btn" do
+        = link_to edit_user_path(current_user.id), class: "top-box__icon--btn" do
           <i class="fas fa-cog"></i>
   .side-groups
-    =link_to "#", class: "side-groups__list" do
-      %p.side-groups__list--name
-        techchamp
-      %p.side-groups__list--message
-        まだメッセージがありません
-    =link_to "#", class: "side-groups__list" do
-      %p.side-groups__list--name
-        techchamp
-      %p.side-groups__list--message
-        まだメッセージがありません
+    - current_user.groups.each do |group|
+      .side-groups__list
+        = link_to '#' do
+          .side-groups__list--name
+            = group.name
+          .side-groups__list--message
+            まだメッセージがありません。      
